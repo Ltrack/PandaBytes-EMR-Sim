@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-content">
+
+    {% set active_tab = 'Imaging' %}
+    {% include "tabs.html" %}
+
+    <div class="section">
+        <div class="note-open">
+          <div class="note-header">
+            <span>{{ report.time }}</span>
+            <span>{{ report.type }}</span>
+            <span>{{ report.author }}</span>
+            <span>{{ report.enc_type }}</span>
+            <span>{{ report.enc_dept }}</span>
+          </div>
+          <div class="note-text">
+            <span class="close-btn" onclick="window.location.href='{{ url_for('imaging') }}'">&#10005;</span>
+            {{ report.text | safe }}
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

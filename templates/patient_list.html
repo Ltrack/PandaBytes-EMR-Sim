@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-content">
+    <div class="section">
+        {% for patient in patients %}
+
+        <!-- <form action="{{ url_for('summary') }}" method="post" id="openNoteForm-{{ patient.mrn }}">
+            <input type="hidden" name="mrn" value="{{ patient.mrn }}">
+            <input type="hidden" name="encounter" value="{{ patient.encounter }}">
+          </form> -->
+  
+          <div class="note" onclick="setPatient('{{ patient.mrn }}');">
+            <div class="note-header">
+              <span>{{ patient.mrn }}</span>
+              <span>{{ patient.name }}</span>
+              <span>{{ patient.age }}</span>
+              <span>{{ patient.gender }}</span>
+            </div>
+          </div>
+
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}

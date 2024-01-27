@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-content">
+
+    {% set active_tab = 'Chart Review' %}
+    {% include "tabs.html" %}
+
+    <div class="section">
+        <div class="note-open">
+          <div class="note-header">
+            <span>{{ note.time }}</span>
+            <span>{{ note.type }}</span>
+            <span>{{ note.author }}</span>
+            <span>{{ note.enc_type }}</span>
+            <span>{{ note.enc_dept }}</span>
+          </div>
+          <div class="note-text">
+            <span class="close-btn" onclick="window.location.href='{{ url_for('chart_review') }}'">&#10005;</span>
+            {{ note.text | safe }}
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

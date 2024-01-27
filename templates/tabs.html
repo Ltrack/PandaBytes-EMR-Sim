@@ -1,0 +1,6 @@
+<div class="tabs">
+    <button class="tab {% if active_tab == 'Summary' %}active{% endif %}" onclick="window.location.href='{{ url_for('summary') }}'">Summary</button>
+    <button class="tab {% if active_tab == 'Chart Review' %}active{% endif %}" onclick="window.location.href='{{ url_for('chart_review') }}'">Chart Review</button>
+    <button class="tab {% if active_tab == 'Imaging' %}active{% endif %}" onclick="window.location.href='{{ url_for('imaging') }}'">Imaging</button>
+    <button class="tab {% if active_tab == 'Labs' %}active{% endif %}" onclick="window.location.href='{{ url_for('labs') }}'">Labs</button>
+</div>

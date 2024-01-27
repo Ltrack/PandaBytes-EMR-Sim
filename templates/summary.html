@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-content">
+    {% set active_tab = 'Summary' %}
+    {% include "tabs.html" %}
+
+    <div class="section">
+        {{ vitals_table | safe }}
+        {{ vitals_graph | safe }}
+    </div>
+</div>
+{% endblock %}

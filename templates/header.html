@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="header-left">
+      <div class="header-info">
+        {% if patient %}
+        <span>Name: {{ patient.name }}</span>
+        <span>Age: {{ patient.age }}</span>
+        <span>Gender: {{ patient.gender }}</span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-info">
+        {% if patient %}
+        <span>Service: {{ patient.service }}</span>
+        <span>Primary Team: {{ patient.primary_team }}</span>
+        {% endif %}
+      </div>
+    </div>
+  <div class="header-links">
+    <a href="{{ url_for('patient_list') }}" class="logout-link">Patient list</a>
+    <a href="{{ url_for('auth.logout') }}" class="logout-link">Logout</a>
+  </div>
+</div>

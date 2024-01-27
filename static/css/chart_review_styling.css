@@ -1,0 +1,237 @@
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+/* Header Styles */
+.header {
+  background-color: #C8E9FF; /* Blue background */
+  color: rgb(0, 0, 0); /* White text color */
+  padding: 10px 20px; /* Padding on all sides */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+}
+
+/* Individual information container */
+.header-info {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center;
+  height: 80px;
+}
+
+/* Individual spans are full width to ensure they stack */
+.header-info span {
+  width: 100%;
+  margin: 2px 0; /* Small margin for spacing */
+}
+
+/* Styling for the Logout link */
+.logout-link {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #3498db; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 5px;
+  margin-right: 20px; /* Creates space on the right side */
+  transition: background-color 0.3s; /* Smooth color transition */
+
+
+}
+
+/* Styling when hovering over the link */
+.logout-link:hover {
+  background-color: #2980b9; /* Darker background color on hover */
+}
+
+
+
+.tabs {
+  background-color: #C8E9FF;
+  padding: 0 0 0 0; 
+
+}
+
+
+.tab {
+  display: inline-block;
+  background-color: #e7e7e7;
+  padding: 10px 15px;
+  margin: 0 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border 0.3s;
+  width: 120px;
+}
+
+.tab:hover,
+.tab.active {
+  background-color: #73bef0;
+  border-color: #c6c6c6;
+}
+
+/* Content styles */
+.main-content {
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Status icon (red circle) */
+.status-icon {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Text next to the status icon */
+.status-text {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.note-text {
+  width: 50%; /* Adjust the width as needed */
+  position: relative;
+}
+
+.note-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.note-header span {
+  flex-grow: 1;
+  flex-basis: 0; /* Ensures equal distribution from the start */
+  text-align: center;
+  padding: 0 10px; /* Adds horizontal padding for spacing */
+}
+
+/* Optional: To ensure there's no overflow of text */
+.note-header span {
+  overflow: show;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* Note styles */
+.note {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 5px solid red;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  max-width: 1600px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.note-open {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 5px solid red;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  max-width: 1600px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 200px;
+}
+
+.login-form form {
+  display: inline-block;
+  margin-top: 1%;
+}
+
+.login-form input[type="text"], 
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #73bef0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #d6d6d6;
+}
+
+.summary_table {
+  border-collapse: collapse;
+  border: none;
+  margin: 100px auto 0; /* Center the table horizontally */
+}
+
+.summary_table td,
+.summary_table th {
+  border: none;
+  padding: 8px;
+  border-top: 1px solid #000; /* Add horizontal lines */
+}
+
+.labs_table {
+  border-collapse: collapse;
+  border: none;
+  margin: 100px auto 0; /* Center the table horizontally */
+}
+
+.labs_table td,
+.labs_table th {
+  border: none;
+  padding: 8px;
+  border-top: 1px solid #000; /* Add horizontal lines */
+}

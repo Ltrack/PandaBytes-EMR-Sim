@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-content">
+
+    {% set active_tab = 'Imaging' %}
+    {% include "tabs.html" %}
+
+    <div class="section">
+
+      {% for report in patient.imaging %}
+
+        <form action="{{ url_for('open_report') }}" method="post" id="openNoteForm-{{ report.accession }}">
+          <input type="hidden" name="mrn" value="{{ patient.mrn }}">
+          <input type="hidden" name="encounter" value="{{ patient.encounter }}">
+          <input type="hidden" name="accession" value="{{ report.accession }}">
+        </form>
+
+        <div class="note" onclick="document.getElementById('openNoteForm-{{ report.accession }}').submit();">
+          <div class="note-header">
+            <span>{{ report.time }}</span>
+            <span>{{ report.type }}</span>
+            <span>{{ report.author }}</span>
+            <span>{{ report.enc_type }}</span>
+            <span>{{ report.enc_dept }}</span>
+          </div>
+        </div>
+
+      {% endfor %}
+
+      
+    </div>
+</div>
+{% endblock %}

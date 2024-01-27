@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-content">
+    {% set active_tab = 'Labs' %}
+    {% include "tabs.html" %}
+
+    <div class="section">
+            {{ labs_table | safe }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chart_review_styling.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PandaByte-EMR</title>
+</head>
+<body>
+  <div class="header">
+    <div class="header-info">
+    </div>
+    <div class="header-info">
+    </div>
+  </div>  
+  
+  <div class="login-form">
+    <h2 style="text-align: center; font-size: 24px; color: #606060;">PandaBytes-EMR</h2>
+    <form action="/login" method="post">
+      <input type="text" id="username" name="username" placeholder="Username" style="width: 100%; text-align: left;"><br>
+      <input type="password" id="password" name="password" placeholder="Password" style="width: 100%; text-align: left;"><br>
+      <input type="submit" value="Login" style="width: 100%;">
+    </form>
+  </div>
+</body>
+</html>

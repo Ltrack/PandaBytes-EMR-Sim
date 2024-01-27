@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chart_review_styling.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="static/js/script.js"></script>
+<title>PandaBytes-EMR</title>
+</head>
+<body>
+  {% include "header.html" %}
+  {% block content %}{% endblock %}
+</body>
+</html>

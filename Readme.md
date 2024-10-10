@@ -20,7 +20,11 @@
 
 
 
-https://github.com/Ltrack/Pandabytes-Sim-EMR/assets/36055614/6f785133-96a6-4359-89b1-378674f9090d
+
+https://github.com/Ltrack/PandaBytes-EMR-Sim/assets/36055614/ef9ef8f7-371b-48ab-82eb-5f2f655d8fc1
+
+
+
 
 
 

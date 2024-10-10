@@ -1,15 +1,14 @@
-
 function setPatient(mrn) {
-    console.log('Setting patient:', mrn);
-    $.ajax({
-        url: '/set_patient/' + mrn,
-        type: 'GET',
-        success: function () {
-            // Redirect to the patient list page after setting the patient.
-            window.location.href = '/summary'; // You can change this URL as needed.
-        },
-        error: function (error) {
-            console.error('Error setting patient:', error);
-        }
-    });
+    fetch(`/set_patient/${mrn}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                if (data.redirect) {
+                    window.location.href = data.redirect;
+                }
+            } else {
+                console.error(data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
 }

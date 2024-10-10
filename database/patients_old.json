@@ -1,0 +1,271 @@
+[
+    {
+        "name": "Doe, Jane",
+        "age": 35,
+        "gender": "Female",
+        "mrn": "123456",
+        "encounter": "10",
+        "service": "IM_GREEN",
+        "primary_team": "IM_GREEN",
+        "notes": [
+            {
+                "id": 100,
+                "time": "Today at 10:47",
+                "type": "Consult",
+                "enc_type": "Admission(Current)",
+                "enc_dept": "Critical Care",
+                "text": "Patient 1<b>Consults</b> -<h2>HTML Table</h2> <table> <tr> <th>Company</th> <th>Contact</th> <th>Country</th> </tr> <tr> <td>Alfreds Futterkiste</td> <td>Maria Anders</td> <td>Germany</td> </tr> <tr> <td>Centro comercial Moctezuma</td> <td>Francisco Chang</td> <td>Mexico</td> </tr> <tr> <td>Ernst Handel</td> <td>Roland Mendel</td> <td>Austria</td> </tr> <tr> <td>Island Trading</td> <td>Helen Bennett</td> <td>UK</td> </tr> <tr> <td>Laughing Bacchus Winecellars</td> <td>Yoshi Tannamuri</td> <td>Canada</td> </tr> <tr> <td>Magazzini Alimentari Riuniti</td> <td>Giovanni Rovelli</td> <td>Italy</td> </tr> </table> <i>Cardiology</i> Patient seen by Dr. Smith. Patient seen by Dr. Smith.Patient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. Smith Patient has a history of heart disease.  Patient is scheduled for a follow-up appointment on 10/15/2015."
+            },
+            {
+                "id": 101,
+                "time": "Today at 10:24",
+                "type": "Progress Note",
+                "enc_type": "Admission(Current)",
+                "enc_dept": "Critical Care",
+                "text": "Patient 1<b>Progress Notes</b> - Patient is doing well.  <h2>HTML Table</h2> <table> <tr> <th>Company</th> <th>Contact</th> <th>Country</th> </tr> <tr> <td>Alfreds Futterkiste</td> <td>Maria Anders</td> <td>Germany</td> </tr> <tr> <td>Centro comercial Moctezuma</td> <td>Francisco Chang</td> <td>Mexico</td> </tr> <tr> <td>Ernst Handel</td> <td>Roland Mendel</td> <td>Austria</td> </tr> <tr> <td>Island Trading</td> <td>Helen Bennett</td> <td>UK</td> </tr> <tr> <td>Laughing Bacchus Winecellars</td> <td>Yoshi Tannamuri</td> <td>Canada</td> </tr> <tr> <td>Magazzini Alimentari Riuniti</td> <td>Giovanni Rovelli</td> <td>Italy</td> </tr> </table><i>Patient</i> is <p>scheduled </p>for a follow-up appointment on 10/15/2015."
+            }
+        ],
+        "vitals": [
+            {
+                "Date": "12/23/2023",
+                "Time": "12:04",
+                "Temp_C": 36.0,
+                "Pulse": 63,
+                "Resp": 14,
+                "BP": "134/82",
+                "SpO2": 96,
+                "Weight_kg": null,
+                "MAP_mmHg": 99,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "AB"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "13:05",
+                "Temp_C": null,
+                "Pulse": 73,
+                "Resp": 13,
+                "BP": null,
+                "SpO2": 99,
+                "Weight_kg": 181,
+                "MAP_mmHg": 94,
+                "O2_Status": null,
+                "Who": "AB"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "14:06",
+                "Temp_C": 39.1,
+                "Pulse": 68,
+                "Resp": 14,
+                "BP": "136/71",
+                "SpO2": 97,
+                "Weight_kg": null,
+                "MAP_mmHg": 94,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "AB"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "15:07",
+                "Temp_C": null,
+                "Pulse": 63,
+                "Resp": 12,
+                "BP": "132/61",
+                "SpO2": 97,
+                "Weight_kg": null,
+                "MAP_mmHg": 81,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "AB"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "16:08",
+                "Temp_C": 36.9,
+                "Pulse": 62,
+                "Resp": 12,
+                "BP": "139/65",
+                "SpO2": 99,
+                "Weight_kg": null,
+                "MAP_mmHg": 83,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "AB"
+            }
+        ],
+        "imaging":[{
+            "accession": 1000,
+            "time": "12/23/23 10:47",
+            "type": "CT Abdomen/Pelvis",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "Patient 1<b>Report 1 Patient 1</b> -<h2>HTML Table</h2> <table> <tr> <th>Company</th> <th>Contact</th> <th>Country</th> </tr> <tr> <td>Alfreds Futterkiste</td> <td>Maria Anders</td> <td>Germany</td> </tr> <tr> <td>Centro comercial Moctezuma</td> <td>Francisco Chang</td> <td>Mexico</td> </tr> <tr> <td>Ernst Handel</td> <td>Roland Mendel</td> <td>Austria</td> </tr> <tr> <td>Island Trading</td> <td>Helen Bennett</td> <td>UK</td> </tr> <tr> <td>Laughing Bacchus Winecellars</td> <td>Yoshi Tannamuri</td> <td>Canada</td> </tr> <tr> <td>Magazzini Alimentari Riuniti</td> <td>Giovanni Rovelli</td> <td>Italy</td> </tr> </table> <i>Cardiology</i> Patient seen by Dr. Smith. Patient seen by Dr. Smith.Patient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. Smith Patient has a history of heart disease.  Patient is scheduled for a follow-up appointment on 10/15/2015."
+        },
+        {
+            "accession": 1001,
+            "time": "Today at 10:24",
+            "type": "Chest Xray",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "Patient 1<b>Report 2 Patient 1</b> - Patient is doing well.  <h2>HTML Table</h2> <table> <tr> <th>Company</th> <th>Contact</th> <th>Country</th> </tr> <tr> <td>Alfreds Futterkiste</td> <td>Maria Anders</td> <td>Germany</td> </tr> <tr> <td>Centro comercial Moctezuma</td> <td>Francisco Chang</td> <td>Mexico</td> </tr> <tr> <td>Ernst Handel</td> <td>Roland Mendel</td> <td>Austria</td> </tr> <tr> <td>Island Trading</td> <td>Helen Bennett</td> <td>UK</td> </tr> <tr> <td>Laughing Bacchus Winecellars</td> <td>Yoshi Tannamuri</td> <td>Canada</td> </tr> <tr> <td>Magazzini Alimentari Riuniti</td> <td>Giovanni Rovelli</td> <td>Italy</td> </tr> </table><i>Patient</i> is <p>scheduled </p>for a follow-up appointment on 10/15/2015."
+        }],
+        "labs":[{
+            "uid": 1000,
+            "time": "12/23/23 10:47",
+            "type": "Pottasium Serum/Plasma",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "3.5",
+            "unit": "mmol/L",
+            "reference_range": "[3.5,5.1]"
+        },
+        {
+            "uid": 1000,
+            "time": "12/23/23 10:47",
+            "type": "Pottasium Serum/Plasma",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "3.5",
+            "unit": "mmol/L",
+            "reference_range": "[3.5,5.1]"
+        }]
+
+    },
+    {
+        "name": "Patient, Tom",
+        "age": 35,
+        "gender": "Male",
+        "mrn": "123457",
+        "encounter": "12",
+        "service": "ER",
+        "primary_team": "ER",
+        "notes": [
+            {
+                "id": 100,
+                "time": "1 day ago at 10:47",
+                "type": "Consult",
+                "enc_type": "Admission(Current)",
+                "enc_dept": "Critical Care",
+                "text": "Patient 2<b>Consults</b> - <i>Cardiology</i> Patient seen by Dr. Smith. Patient seen by Dr. Smith.Patient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. Smith Patient has a history of heart disease.  Patient is scheduled for a follow-up appointment on 10/15/2015."
+            },
+            {
+                "id": 101,
+                "time": "1 day ago at 10:24",
+                "type": "Progress Note",
+                "enc_type": "Admission(Current)",
+                "enc_dept": "Critical Care",
+                "text": "Patient 2<b>Progress Notes</b> - Patient is doing well.  <i>Patient</i> is <p>scheduled </p>for a follow-up appointment on 10/15/2015."
+            }
+        ],
+        "vitals": [
+            {
+                "Date": "12/23/2023",
+                "Time": "11:04",
+                "Temp_C": 35.4,
+                "Pulse": 73,
+                "Resp": 14,
+                "BP": "138/97",
+                "SpO2": 96,
+                "Weight_kg": null,
+                "MAP_mmHg": 99,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "BC"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "11:05",
+                "Temp_C": null,
+                "Pulse": 68,
+                "Resp": 14,
+                "BP": null,
+                "SpO2": 99,
+                "Weight_kg": 83,
+                "MAP_mmHg": 84,
+                "O2_Status": null,
+                "Who": "BC"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "11:06",
+                "Temp_C": 36.1,
+                "Pulse": 69,
+                "Resp": 17,
+                "BP": "130/70",
+                "SpO2": 99,
+                "Weight_kg": null,
+                "MAP_mmHg": 92,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "AB"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "11:07",
+                "Temp_C": null,
+                "Pulse": 64,
+                "Resp": 14,
+                "BP": "123/57",
+                "SpO2": 95,
+                "Weight_kg": null,
+                "MAP_mmHg": 84,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "AB"
+            },
+            {
+                "Date": "12/23/2023",
+                "Time": "11:08",
+                "Temp_C": 36.9,
+                "Pulse": 64,
+                "Resp": 14,
+                "BP": "129/62",
+                "SpO2": 99,
+                "Weight_kg": null,
+                "MAP_mmHg": 83,
+                "O2_Status": "NIV (CPAP/BiPAP)",
+                "Who": "BC"
+            }
+        ],
+        "imaging":[{
+            "accession": 1000,
+            "time": "Today at 10:47",
+            "type": "CT Abdomen/Pelvis",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "Patient 2<b>Report 1 Patient 2</b> -<h2>HTML Table</h2> <table> <tr> <th>Company</th> <th>Contact</th> <th>Country</th> </tr> <tr> <td>Alfreds Futterkiste</td> <td>Maria Anders</td> <td>Germany</td> </tr> <tr> <td>Centro comercial Moctezuma</td> <td>Francisco Chang</td> <td>Mexico</td> </tr> <tr> <td>Ernst Handel</td> <td>Roland Mendel</td> <td>Austria</td> </tr> <tr> <td>Island Trading</td> <td>Helen Bennett</td> <td>UK</td> </tr> <tr> <td>Laughing Bacchus Winecellars</td> <td>Yoshi Tannamuri</td> <td>Canada</td> </tr> <tr> <td>Magazzini Alimentari Riuniti</td> <td>Giovanni Rovelli</td> <td>Italy</td> </tr> </table> <i>Cardiology</i> Patient seen by Dr. Smith. Patient seen by Dr. Smith.Patient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. SmithPatient seen by Dr. Smith Patient has a history of heart disease.  Patient is scheduled for a follow-up appointment on 10/15/2015."
+        },
+        {
+            "accession": 1001,
+            "time": "Today at 10:24",
+            "type": "Chest Xray",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "<p>INDICATION: Right lower quadrant pain</p> <p>TECHNIQUE: Contrast enhanced CT of the abdomen and Pelvis</p> <h3>FINDINGS:</h3> <p>LIVER: Normal.</p> <p>GALLBLADDER: Normal.</p> <p>PANCREAS: Normal.</p> <p>SPLEEN: Normal.</p> <p>ADRENAL GLANDS: Normal.</p> <p>KIDNEYS AND BLADDER: Normal.</p> <p>REPRODUCTIVE ORGANS: Normal.</p> <p>GASTROINTESTINAL TRACT: The appendix is thickened measuring up to 1.2 cm. Adjacent inflammatory changes are seen. Reactive thickening of the adjacent terminal ileum. Normal caliber bowel loops.</p> <p>PERITONEUM AND MESENTERY: Normal.</p> <p>RETROPERITONEUM AND NODES: Normal.</p> <p>VASCULATURE: Normal.</p> <p>BONES AND SOFT TISSUES: Normal.</p> <h3>IMPRESSION:</h3> <p>Acute appendicitis.</p>"
+        }],
+        "labs":[{
+            "uid": 1000,
+            "time": "12/23/23 10:47",
+            "type": "Pottasium Serum/Plasma",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "3.5",
+            "unit": "mmol/L",
+            "reference_range": "[3.5,5.1]"
+        },
+        {
+            "uid": 1000,
+            "time": "12/23/23 10:47",
+            "type": "Pottasium Serum/Plasma",
+            "enc_type": "Admission(Current)",
+            "enc_dept": "Radiology",
+            "author": "Dr. Smith",
+            "text": "3.5",
+            "unit": "mmol/L",
+            "reference_range": "[3.5,5.1]"
+        }]
+    }
+]

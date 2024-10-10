@@ -6,7 +6,7 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 import base64
 from io import BytesIO
 import json
-from backend.graph import vitals_graph_grid_plotly
+from backend.graph import vitals_graph_grid_plotly, labs_graph_grid_plotly
 from dotenv import load_dotenv
 import os
 
@@ -79,27 +79,39 @@ def get_patient(mrn, encounter):
 @app.route("/")
 @login_required
 def index():
-    return render_template("summary.html", patient=patients[0])
+    current_patient_mrn = session.get("current_patient_mrn")
+    if not current_patient_mrn:
+        return redirect(url_for("patient_list"))
+    
+    current_patient = next((p for p in patients if p["mrn"] == current_patient_mrn), None)
+    if not current_patient:
+        return redirect(url_for("patient_list"))
+    
+    return render_template("summary.html", patient=current_patient)
 
 
 @app.route("/set_patient/<int:mrn>")
 def set_patient(mrn):
     print(f"Setting patient to {mrn}")
     for patient in patients:
-        print(patient["mrn"])
-        if int(patient["mrn"]) == mrn:
+        if patient["mrn"] == str(mrn):  # Convert mrn to string for comparison
             print(f"Found patient {patient['mrn']}")
-            session["current_patient"] = patient
-            return jsonify({"success": True, "message": "Patient set successfully"})
+            session["current_patient_mrn"] = patient["mrn"]
+            return jsonify({"success": True, "message": "Patient set successfully", "redirect": url_for("summary")})
     return jsonify({"success": False, "message": "Patient not found"}), 404
 
 
 @app.route("/summary")
 @login_required
 def summary():
-    current_patient = session.get("current_patient")
+    current_patient_mrn = session.get("current_patient_mrn")
+    if not current_patient_mrn:
+        return redirect(url_for("patient_list"))
+    
+    current_patient = next((p for p in patients if p["mrn"] == current_patient_mrn), None)
     if not current_patient:
         return redirect(url_for("patient_list"))
+    
     plotly_div, html_table = vitals_graph_grid_plotly(current_patient)
     html_table = html_table.replace("dataframe table table-striped", "summary_table")
     html_table = html_table.replace("NaN", "-")
@@ -115,11 +127,15 @@ def summary():
 @app.route("/labs")
 @login_required
 def labs():
-    current_patient = session.get("current_patient")
+    current_patient_mrn = session.get("current_patient_mrn")
+    if not current_patient_mrn:
+        return redirect(url_for("patient_list"))
+    
+    current_patient = next((p for p in patients if p["mrn"] == current_patient_mrn), None)
     if not current_patient:
         return redirect(url_for("patient_list"))
-    plotly_div, html_table = vitals_graph_grid_plotly(current_patient)
-    print(html_table)
+    
+    plotly_div, html_table = labs_graph_grid_plotly(current_patient)
     html_table = html_table.replace("dataframe table table-striped", "labs_table")
     html_table = html_table.replace("NaN", "-")
     html_table = html_table.replace("None", "-")
@@ -135,13 +151,22 @@ def labs():
 @login_required
 def patient_list():
     load_patients()
+    # Clear the current patient selection when viewing the patient list
+    session.pop('current_patient_mrn', None)
     return render_template("patient_list.html", patients=patients)
 
 
 @app.route("/imaging")
 @login_required
 def imaging():
-    current_patient = session.get("current_patient")
+    current_patient_mrn = session.get("current_patient_mrn")
+    if not current_patient_mrn:
+        return redirect(url_for("patient_list"))
+    
+    current_patient = next((p for p in patients if p["mrn"] == current_patient_mrn), None)
+    if not current_patient:
+        return redirect(url_for("patient_list"))
+    
     return render_template("imaging.html", patient=current_patient)
 
 
@@ -161,7 +186,14 @@ def open_report():
 @app.route("/chart-review")
 @login_required
 def chart_review():
-    current_patient = session.get("current_patient")
+    current_patient_mrn = session.get("current_patient_mrn")
+    if not current_patient_mrn:
+        return redirect(url_for("patient_list"))
+    
+    current_patient = next((p for p in patients if p["mrn"] == current_patient_mrn), None)
+    if not current_patient:
+        return redirect(url_for("patient_list"))
+    
     return render_template("chart_review.html", patient=current_patient)
 
 

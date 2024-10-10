@@ -4,22 +4,30 @@
 <div class="main-content">
     <div class="section">
         {% for patient in patients %}
-
-        <!-- <form action="{{ url_for('summary') }}" method="post" id="openNoteForm-{{ patient.mrn }}">
-            <input type="hidden" name="mrn" value="{{ patient.mrn }}">
-            <input type="hidden" name="encounter" value="{{ patient.encounter }}">
-          </form> -->
-  
-          <div class="note" onclick="setPatient('{{ patient.mrn }}');">
-            <div class="note-header">
-              <span>{{ patient.mrn }}</span>
-              <span>{{ patient.name }}</span>
-              <span>{{ patient.age }}</span>
-              <span>{{ patient.gender }}</span>
+            <div class="note" onclick="setPatient('{{ patient.mrn }}');">
+                <div class="note-header">
+                    <span>{{ patient.mrn }}</span>
+                    <span>{{ patient.name }}</span>
+                    <span>{{ patient.age }}</span>
+                    <span>{{ patient.gender }}</span>
+                </div>
             </div>
-          </div>
-
-      {% endfor %}
+        {% endfor %}
     </div>
 </div>
+
+<script>
+function setPatient(mrn) {
+    fetch(`/set_patient/${mrn}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.redirect) {
+                window.location.href = data.redirect;
+            } else {
+                console.error(data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+</script>
 {% endblock %}
